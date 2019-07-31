@@ -1,0 +1,7 @@
+default_events:
+- deployment
+- pull_request
+default_permissions:
+  deployments: write
+  metadata: read
+  pull_requests: write
