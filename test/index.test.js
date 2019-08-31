@@ -67,4 +67,3 @@ describe('Bot app', () => {
     await probot.receive({ name: 'pull_request', payload })
   })
 })
-
