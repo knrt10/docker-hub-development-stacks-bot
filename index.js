@@ -9,4 +9,11 @@ module.exports = app => {
   commands(app, 'ompBot', ompBot.set)
 
   app.on('status', ompBot.statusComment)
+  app.on([
+    'pull_request.opened',
+    'pull_request.edited',
+    'pull_request.synchronize',
+    'pull_request.labeled',
+    'pull_request.unlabeled',
+  ], ompBot.handlePullRequestChange)
 }
